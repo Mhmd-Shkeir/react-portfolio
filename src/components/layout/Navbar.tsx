@@ -16,14 +16,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleNavClick = (id: string) => {
-    // Scroll first, while the menu is still fully open and stable. Some
-    // mobile browsers can drop a tap if the element (or an animated
-    // ancestor, like this menu closing) is mid-transition at touch time.
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-    setIsOpen(false)
-  }
-
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-300 ${
@@ -33,26 +25,23 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <button
-          onClick={() => handleNavClick('home')}
-          className="font-mono text-sm font-semibold text-ink"
-        >
+        <a href="#home" className="font-mono text-sm font-semibold text-ink">
           MAS<span className="text-accent">.</span>
-        </button>
+        </a>
 
         <ul className="hidden items-center gap-1 md:flex">
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
-              <button
-                onClick={() => handleNavClick(item.id)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200 ${
+              <a
+                href={`#${item.id}`}
+                className={`inline-block rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200 ${
                   activeId === item.id
                     ? 'text-accent'
                     : 'text-muted hover:text-ink'
                 }`}
               >
                 {item.label}
-              </button>
+              </a>
             </li>
           ))}
         </ul>
@@ -77,14 +66,15 @@ export default function Navbar() {
           >
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
-                <button
-                  onClick={() => handleNavClick(item.id)}
+                <a
+                  href={`#${item.id}`}
+                  onClick={() => setIsOpen(false)}
                   className={`block w-full px-6 py-3 text-left text-sm font-medium ${
                     activeId === item.id ? 'text-accent' : 'text-muted'
                   }`}
                 >
                   {item.label}
-                </button>
+                </a>
               </li>
             ))}
           </motion.ul>

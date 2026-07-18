@@ -78,30 +78,11 @@ export default function Hero() {
           variants={item}
           className="mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <Button
-            href="#projects"
-            onClick={(e) => {
-              e.preventDefault()
-              document
-                .getElementById('projects')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
-            View Projects
-          </Button>
+          <Button href="#projects">View Projects</Button>
           <Button variant="secondary" href={profile.resumeUrl} download>
             <FiDownload size={16} /> Download Resume
           </Button>
-          <Button
-            variant="ghost"
-            href="#contact"
-            onClick={(e) => {
-              e.preventDefault()
-              document
-                .getElementById('contact')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
+          <Button variant="ghost" href="#contact">
             Contact Me
           </Button>
         </motion.div>
