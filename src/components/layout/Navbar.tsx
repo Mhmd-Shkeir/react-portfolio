@@ -17,8 +17,11 @@ export default function Navbar() {
   }, [])
 
   const handleNavClick = (id: string) => {
-    setIsOpen(false)
+    // Scroll first, while the menu is still fully open and stable. Some
+    // mobile browsers can drop a tap if the element (or an animated
+    // ancestor, like this menu closing) is mid-transition at touch time.
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    setIsOpen(false)
   }
 
   return (
