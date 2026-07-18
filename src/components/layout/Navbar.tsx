@@ -58,11 +58,11 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.ul
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-x-0 top-full overflow-hidden border-b border-border bg-bg md:hidden"
+            className="absolute inset-x-0 top-full border-b border-border bg-bg md:hidden"
           >
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
