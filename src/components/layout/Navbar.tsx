@@ -70,7 +70,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="overflow-hidden border-b border-border bg-bg md:hidden"
+            className="absolute inset-x-0 top-full overflow-hidden border-b border-border bg-bg md:hidden"
           >
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
