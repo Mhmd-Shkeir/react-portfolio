@@ -26,6 +26,8 @@ const FALLBACK_DESCRIPTIONS: Record<string, string> = {
     'Cross-platform Flutter app for campus attendance and classroom management with RFID/beacon tracking.',
   Multimedia:
     'AI sneaker recognition platform: image classification, price prediction, similarity search, and inventory management.',
+  'upscale-unity-assessment':
+    'Unity3D internship technical assessment for Upscale Hub — third-person controller, enemy FSM/NavMesh AI, save/load, and a full UI/audio polish pass.',
 }
 
 export async function fetchLatestRepos(
