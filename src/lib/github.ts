@@ -9,7 +9,7 @@ export interface GithubRepo {
 }
 
 const CACHE_KEY = 'github-repos-cache'
-const CACHE_TTL_MS = 1000 * 60 * 30
+const CACHE_TTL_MS = 1000 * 60 * 5
 
 interface CacheEntry {
   timestamp: number
