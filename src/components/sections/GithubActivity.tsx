@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FiGithub, FiStar } from 'react-icons/fi'
 import { useGithubRepos } from '@/hooks/useGithubRepos'
@@ -5,6 +6,7 @@ import { GITHUB_USERNAME } from '@/lib/constants'
 
 export default function GithubActivity() {
   const { repos, isLoading, error } = useGithubRepos(GITHUB_USERNAME, 6)
+  const [chartFailed, setChartFailed] = useState(false)
 
   return (
     <div className="mt-20">
@@ -13,13 +15,14 @@ export default function GithubActivity() {
         <h3 className="text-xl font-semibold text-ink">Latest from GitHub</h3>
       </div>
 
-      {!isLoading && !error && (
+      {!isLoading && !error && !chartFailed && (
         <div className="mb-10 overflow-x-auto rounded-2xl border border-border bg-surface p-4">
           <img
             src={`https://ghchart.rshah.org/3b82f6/${GITHUB_USERNAME}`}
             alt={`${GITHUB_USERNAME}'s GitHub contribution graph`}
             className="mx-auto min-w-[640px]"
             loading="lazy"
+            onError={() => setChartFailed(true)}
           />
         </div>
       )}

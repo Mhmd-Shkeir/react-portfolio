@@ -35,9 +35,19 @@ export async function fetchLatestRepos(
   const cached = readCache()
   if (cached) return cached
 
-  const response = await fetch(
-    `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`,
-  )
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), 8000)
+
+  let response: Response
+  try {
+    response = await fetch(
+      `https://api.github.com/users/${username}/repos?sort=updated&per_page=100`,
+      { signal: controller.signal },
+    )
+  } finally {
+    clearTimeout(timeout)
+  }
+
   if (!response.ok) {
     throw new Error(`GitHub API error: ${response.status}`)
   }
