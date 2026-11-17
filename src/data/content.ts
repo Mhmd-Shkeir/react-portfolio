@@ -49,10 +49,10 @@ export const experience: ExperienceItem[] = [
   {
     id: 'speedy',
     company: 'Speedy Smart',
-    role: 'Junior Full-Stack Developer Intern',
+    role: 'Junior Full-Stack Developer',
     period: 'Oct 2026 – Present',
     bullets: [
-      'Supporting product implementation and testing in Engineering & Products, with planned contributions across full-stack development, AI integration, quality assurance, and mobile applications.',
+      'Building a mobile application and supporting product implementation and testing in Engineering & Products, with contributions across full-stack development, AI integration, and quality assurance.',
     ],
     tags: ['Full-Stack', 'AI Integration', 'QA', 'Mobile'],
   },
