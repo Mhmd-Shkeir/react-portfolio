@@ -7,9 +7,26 @@ interface ModalProps {
   isOpen: boolean
   onClose: () => void
   children: React.ReactNode
+  /** `xl` is a near-full-height viewer panel with no inner padding. */
+  size?: 'md' | 'xl'
 }
 
-export default function Modal({ isOpen, onClose, children }: ModalProps) {
+const panelClasses = {
+  md: 'max-h-[85vh] max-w-2xl overflow-y-auto p-8',
+  xl: 'flex h-[90vh] max-w-4xl flex-col overflow-hidden',
+}
+
+const closeClasses = {
+  md: 'right-6 top-6',
+  xl: 'right-4 top-3.5',
+}
+
+export default function Modal({
+  isOpen,
+  onClose,
+  children,
+  size = 'md',
+}: ModalProps) {
   useEffect(() => {
     if (!isOpen) return
 
@@ -43,12 +60,12 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
             exit={{ opacity: 0, y: 24, scale: 0.97 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
             onClick={(e) => e.stopPropagation()}
-            className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-border bg-surface p-8"
+            className={`relative w-full rounded-2xl border border-border bg-surface ${panelClasses[size]}`}
           >
             <button
               onClick={onClose}
               aria-label="Close"
-              className="absolute right-6 top-6 text-muted transition-colors hover:text-ink"
+              className={`absolute z-10 text-muted transition-colors hover:text-ink ${closeClasses[size]}`}
             >
               <FiX size={20} />
             </button>

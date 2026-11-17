@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
-import { FiArrowDown, FiDownload, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
+import { FiArrowDown, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { profile, socialLinks, stats } from '@/data/content'
 import Button from '@/components/ui/Button'
+import ResumeActions from '@/components/shared/ResumeActions'
 import TypingText from '@/components/shared/TypingText'
 import ParticleBackground from '@/components/shared/ParticleBackground'
 import AnimatedCounter from '@/components/shared/AnimatedCounter'
@@ -79,9 +80,10 @@ export default function Hero() {
           className="mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <Button href="#projects">View Projects</Button>
-          <Button variant="secondary" href={profile.resumeUrl} download>
-            <FiDownload size={16} /> Download Resume
-          </Button>
+          <ResumeActions
+            url={profile.resumeUrl}
+            fileName="Mohammad_Ali_Shkeir_CV.pdf"
+          />
           <Button variant="ghost" href="#contact">
             Contact Me
           </Button>
