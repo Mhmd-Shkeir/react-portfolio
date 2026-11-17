@@ -47,6 +47,16 @@ export const stats: Stat[] = [
 
 export const experience: ExperienceItem[] = [
   {
+    id: 'speedy',
+    company: 'Speedy Smart',
+    role: 'Junior Full-Stack Developer Intern',
+    period: 'Oct 2026 – Present',
+    bullets: [
+      'Supporting product implementation and testing in Engineering & Products, with planned contributions across full-stack development, AI integration, quality assurance, and mobile applications.',
+    ],
+    tags: ['Full-Stack', 'AI Integration', 'QA', 'Mobile'],
+  },
+  {
     id: 'auvia',
     company: 'Auvia-TabbeqAI',
     role: 'AI & XR/AR Intern',
@@ -253,6 +263,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Node.js', icon: 'nodejs' },
       { name: 'Express.js', icon: 'express' },
       { name: 'FastAPI', icon: 'fastapi' },
+      { name: 'Flask', icon: 'flask' },
       { name: 'ASP.NET MVC', icon: 'aspnet' },
       { name: 'Laravel', icon: 'laravel' },
       { name: 'REST APIs', icon: 'restapi' },
@@ -276,6 +287,9 @@ export const skillCategories: SkillCategory[] = [
     id: 'databases',
     name: 'Databases',
     skills: [
+      { name: 'PostgreSQL', icon: 'postgresql' },
+      { name: 'Prisma', icon: 'prisma' },
+      { name: 'Firebase', icon: 'firebase' },
       { name: 'MySQL', icon: 'mysql' },
       { name: 'SQL Server', icon: 'sqlserver' },
       { name: 'MongoDB', icon: 'mongodb' },
@@ -305,12 +319,28 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Deep Learning', icon: 'deeplearning' },
       { name: 'NumPy', icon: 'numpy' },
       { name: 'TensorFlow', icon: 'tensorflow' },
+      { name: 'PyTorch', icon: 'pytorch' },
+      { name: 'NLP', icon: 'nlp' },
+      { name: 'YOLO', icon: 'yolo' },
+      { name: 'CatBoost', icon: 'catboost' },
       { name: 'OpenCV', icon: 'opencv' },
       { name: 'MediaPipe', icon: 'mediapipe' },
       { name: 'Computer Vision', icon: 'computervision' },
       { name: 'Image Classification', icon: 'imageclassification' },
       { name: 'Object Detection', icon: 'objectdetection' },
       { name: 'Autoencoders', icon: 'autoencoders' },
+    ],
+  },
+  {
+    id: 'llm',
+    name: 'LLM & Retrieval',
+    skills: [
+      { name: 'Groq', icon: 'groq' },
+      { name: 'OpenAI API/SDK', icon: 'openai' },
+      { name: 'Ollama', icon: 'ollama' },
+      { name: 'Function Calling', icon: 'functioncalling' },
+      { name: 'CLIP Embeddings', icon: 'clip' },
+      { name: 'FAISS Vector Search', icon: 'faiss' },
     ],
   },
   {
@@ -331,6 +361,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'GitHub', icon: 'github' },
       { name: 'Postman', icon: 'postman' },
       { name: 'Linux', icon: 'linux' },
+      { name: 'Android Studio', icon: 'androidstudio' },
     ],
   },
 ]

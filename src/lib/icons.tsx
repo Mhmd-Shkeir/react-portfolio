@@ -30,6 +30,14 @@ import {
   SiOpencv,
   SiMediapipe,
   SiAngular,
+  SiFlask,
+  SiPostgresql,
+  SiPrisma,
+  SiFirebase,
+  SiPytorch,
+  SiYolo,
+  SiOllama,
+  SiAndroidstudio,
 } from 'react-icons/si'
 import {
   FiCode,
@@ -42,6 +50,7 @@ import {
   FiLayers,
   FiGrid,
   FiPenTool,
+  FiSearch,
 } from 'react-icons/fi'
 
 const registry: Record<string, IconType> = {
@@ -104,6 +113,21 @@ const registry: Record<string, IconType> = {
   imageclassification: FiCpu,
   objectdetection: FiCpu,
   autoencoders: FiCpu,
+  flask: SiFlask,
+  postgresql: SiPostgresql,
+  prisma: SiPrisma,
+  firebase: SiFirebase,
+  pytorch: SiPytorch,
+  nlp: FiCpu,
+  yolo: SiYolo,
+  catboost: FiCpu,
+  groq: FiCpu,
+  openai: FiCpu,
+  ollama: SiOllama,
+  functioncalling: FiCode,
+  clip: FiSearch,
+  faiss: FiSearch,
+  androidstudio: SiAndroidstudio,
 }
 
 export function getSkillIcon(key: string): IconType {
