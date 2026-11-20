@@ -29,7 +29,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24"
+      className="relative flex min-h-svh items-center overflow-hidden pb-28 pt-24"
     >
       <ParticleBackground />
       <div
@@ -91,7 +91,7 @@ export default function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-8 flex items-center justify-center gap-5"
+          className="mt-6 flex items-center justify-center gap-1"
         >
           {socialLinks.map((link) => {
             const Icon = iconMap[link.icon as keyof typeof iconMap]
@@ -102,7 +102,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={link.label}
-                className="text-muted transition-colors duration-200 hover:text-accent"
+                className="p-3.5 text-muted transition-colors duration-200 hover:text-accent"
               >
                 {Icon && <Icon size={20} />}
               </a>

@@ -23,7 +23,7 @@ export default function Skills() {
           <button
             key={category.id}
             onClick={() => setActiveId(category.id)}
-            className="relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-200"
+            className="relative inline-flex min-h-11 items-center rounded-full px-4 text-sm font-medium transition-colors duration-200"
           >
             {activeId === category.id && (
               <motion.span

@@ -17,7 +17,7 @@ export default function Footer() {
           © {year} {profile.name}. All rights reserved.
         </p>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-1">
           {socialLinks.map((link) => {
             const Icon = iconMap[link.icon as keyof typeof iconMap]
             return (
@@ -27,7 +27,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={link.label}
-                className="text-muted transition-colors duration-200 hover:text-accent"
+                className="p-3.5 text-muted transition-colors duration-200 hover:text-accent"
               >
                 {Icon && <Icon size={18} />}
               </a>

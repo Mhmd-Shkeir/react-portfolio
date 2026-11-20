@@ -25,7 +25,10 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#home" className="font-mono text-sm font-semibold text-ink">
+        <a
+          href="#home"
+          className="-ml-2 inline-flex min-h-11 items-center px-2 font-mono text-sm font-semibold text-ink"
+        >
           MAS<span className="text-accent">.</span>
         </a>
 
@@ -48,7 +51,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setIsOpen((prev) => !prev)}
-          className="text-ink md:hidden"
+          className="-mr-2 flex h-11 w-11 items-center justify-center text-ink md:hidden"
           aria-label="Toggle menu"
         >
           {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
