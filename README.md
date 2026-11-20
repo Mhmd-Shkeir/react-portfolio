@@ -8,7 +8,7 @@ Personal portfolio site built with React, Vite, and Tailwind CSS.
 
 - Hero, About, Experience timeline, Projects, Skills, Certifications, and Contact sections
 - Project cards with a detail modal (tech stack, description, GitHub links)
-- Live GitHub activity feed (contribution graph + latest repos, pulled from the GitHub REST API)
+- GitHub contribution graph
 - Working contact form via EmailJS
 - Scroll-spy navigation with a mobile dropdown menu
 - Framer Motion animations throughout, respecting `prefers-reduced-motion`
@@ -58,7 +58,7 @@ src/
 │   ├── shared/       # TypingText, ParticleBackground, AnimatedCounter
 │   └── ui/           # Button, Modal, SectionHeading
 ├── data/             # Site content (profile, experience, projects, skills, certifications)
-├── hooks/            # useActiveSection, useGithubRepos
-├── lib/              # GitHub API client, icon registry, constants
+├── hooks/            # useActiveSection
+├── lib/              # icon registry, constants
 └── types/            # Shared TypeScript types
 ```
