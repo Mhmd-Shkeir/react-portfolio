@@ -18,7 +18,7 @@ export const profile = {
   tagline:
     'Building scalable applications using React, Node.js, ASP.NET, FastAPI and AI.',
   summary:
-    'Software engineering student with full-stack internship experience developing scalable web applications, REST APIs, and AI-powered solutions using Node.js, ASP.NET Core MVC, React.js, and Flutter. Experienced in backend development, database design, and building production-oriented software across web, AI, IoT, and XR/AR technologies.',
+    'Computer and Communications Engineering student focused on software engineering, full-stack and backend development, AI/ML, and computer vision. Internship and project experience building web platforms, REST APIs, Flutter mobile apps, and Unity XR/AR applications. Hands-on work with databases, LLM integration, image processing, and IoT systems using Python, Java, C#, JavaScript, and TypeScript.',
   location: 'Baabda, Lebanon',
   education: {
     school: 'Antonine University, Baabda, Lebanon',
@@ -40,9 +40,9 @@ export const socialLinks: SocialLink[] = [
 ]
 
 export const stats: Stat[] = [
-  { label: 'Internships', value: 3, suffix: '+' },
-  { label: 'Projects', value: 10, suffix: '+' },
-  { label: 'Technologies', value: 15, suffix: '+' },
+  { label: 'Internships', value: 4, suffix: '+' },
+  { label: 'Projects', value: 20, suffix: '+' },
+  { label: 'Technologies', value: 40, suffix: '+' },
 ]
 
 export const experience: ExperienceItem[] = [
@@ -58,14 +58,15 @@ export const experience: ExperienceItem[] = [
   },
   {
     id: 'auvia',
-    company: 'Auvia-TabbeqAI',
-    role: 'AI & XR/AR Intern',
-    period: '2025 – 2026',
+    company: 'TabbeQ AI',
+    role: 'XR/AR & Computer Vision Intern',
+    period: 'Sep 2025 – Sep 2026',
     bullets: [
-      'Built AI-powered AR/XR applications in Unity, implementing object tracking and gesture recognition for robotics and workout-detection use cases.',
-      'Tuned application performance for real-time tracking scenarios, working across Unity, C#, and AR Foundation.',
+      'Developed Unity/C# XR/AR applications with MediaPipe body/pose tracking for exercise counting, robot-drawing AR, portals, and AR fitting mirrors; integrated gesture/voice interaction and optimized real-time tracking.',
+      'Researched PCB Automated Optical Inspection (AOI) with Python/OpenCV: defect datasets, object detection, OCR, anomaly detection, and image registration.',
+      'Evaluated ORB, SIFT, and AKAZE for image registration and YOLO for object detection; contributed to the proposed inspection pipeline and system architecture.',
     ],
-    tags: ['Unity', 'C#', 'AR Foundation', 'Vuforia', 'OpenCV', 'MediaPipe', 'Computer Vision'],
+    tags: ['Unity', 'C#', 'MediaPipe', 'OpenCV', 'YOLO', 'Python', 'AR Foundation'],
   },
   {
     id: 'vanrise',
@@ -96,17 +97,16 @@ export const projects: Project[] = [
     id: 'smart-university',
     title: 'Smart University IoT Platform',
     description:
-      'Cross-platform Flutter app for campus attendance and classroom management, with RFID/beacon tracking, a Firebase backend, and real-time analytics.',
+      'Flutter app for campus attendance and classroom management, with facial-recognition attendance, IoT sensor monitoring, and real-time dashboards.',
     longDescription:
-      'Built a cross-platform Flutter application (iOS, Android, web, desktop) with separate student and administrator interfaces, backed by Firebase and a Node.js/Python service layer. Integrated RFID/Bluetooth-beacon attendance tracking and an AI-based detection model, exposing REST APIs and real-time attendance and facility dashboards.',
-    tags: ['Flutter', 'Firebase', 'Node.js', 'RFID', 'IoT'],
+      'Built a cross-platform Flutter application with separate student and administrator interfaces, backed by a FastAPI and MongoDB service layer. Integrated AI-based facial recognition for attendance (with human verification) and real-time IoT sensor monitoring, exposing REST APIs and live dashboards for attendance and classroom conditions.',
+    tags: ['Flutter', 'FastAPI', 'MongoDB', 'Firebase', 'Face Recognition', 'IoT'],
     repos: [
       {
         label: 'Code',
         url: 'https://github.com/Mhmd-Shkeir/smart-university_iot_mobile',
       },
     ],
-    featured: true,
   },
   {
     id: 'money-transfer',
@@ -122,7 +122,6 @@ export const projects: Project[] = [
         url: 'https://github.com/Mhmd-Shkeir/money-transfer-system-laravel',
       },
     ],
-    featured: true,
   },
   {
     id: 'admin-console',
@@ -138,16 +137,15 @@ export const projects: Project[] = [
         url: 'https://github.com/Mhmd-Shkeir/Admin_client_console-Nodejs',
       },
     ],
-    featured: true,
   },
   {
     id: 'psyconnect',
     title: 'PsyConnect',
     description:
-      'Psychotherapist booking management system with role-based access across Admin, User, and Agent roles.',
+      'Psychotherapist booking management system with role-based access for Admin, Patient, and Therapist roles.',
     longDescription:
-      'Architected a full-stack psychotherapist booking management platform, implementing RBAC across Admin, User, and Agent roles, with database-driven dashboards connecting the React.js frontend to an ASP.NET Core MVC backend.',
-    tags: ['ASP.NET Core MVC', 'C#', 'SQL Server', 'React.js'],
+      'Worked on a psychotherapist booking platform in ASP.NET Core MVC with role-based access for Admin, Patient, and Therapist: appointment booking and scheduling, session notes, and database-driven dashboards over SQL Server.',
+    tags: ['ASP.NET Core MVC', 'C#', 'SQL Server', 'RBAC'],
     repos: [{ label: 'Code', url: 'https://github.com/Mhmd-Shkeir/PsyConnect' }],
   },
   {
@@ -183,7 +181,6 @@ export const projects: Project[] = [
       'Built a full-stack sneaker recognition platform: a ResNet50 model classifies uploaded sneaker images, a CatBoost regressor predicts market price, and FAISS powers visual similarity search, all served through a Flask REST API with a React frontend and MongoDB/GridFS-backed inventory management.',
     tags: ['Python', 'PyTorch', 'TensorFlow', 'Flask', 'React', 'MongoDB', 'FAISS'],
     repos: [{ label: 'Code', url: 'https://github.com/Mhmd-Shkeir/Multimedia' }],
-    featured: true,
   },
   {
     id: 'workout-detection',
@@ -228,6 +225,45 @@ export const projects: Project[] = [
     tags: ['Laravel', 'PHP', 'Blade', 'MySQL', 'RBAC'],
     repos: [{ label: 'Code', url: 'https://github.com/Mhmd-Shkeir/Mini-projects' }],
   },
+  {
+    id: 'master-erp',
+    title: 'Master Business ERP',
+    description:
+      'ERP workflows with role-based access and an LLM layer for natural-language database queries, daily briefs, and approval-based email drafts.',
+    longDescription:
+      'Built ERP-related business workflows with role-based access and LLM integration. The assistant answers natural-language questions against the database, produces daily briefs, and drafts emails that need approval before sending, all through role-filtered tools so each user only reaches what their role allows.',
+    tags: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Groq', 'OpenAI SDK'],
+    repos: [{ label: 'Code', url: 'https://github.com/Mhmd-Shkeir/master-business-app' }],
+  },
+  {
+    id: 'lumina-chat',
+    title: 'Lumina Chat',
+    description:
+      'Flutter messaging app with real-time chat, presence, read receipts, translation, and an LLM assistant.',
+    longDescription:
+      'Built a Flutter and Firebase messaging application with real-time messaging, presence, and read receipts, using Riverpod and GoRouter. Adds message translation and a Groq-powered LLM assistant.',
+    tags: ['Flutter', 'Dart', 'Firebase', 'Riverpod', 'GoRouter', 'Groq'],
+    repos: [{ label: 'Code', url: 'https://github.com/Mhmd-Shkeir/Chatting_app' }],
+  },
+  {
+    id: 'wall-touch',
+    title: 'Wall Touch',
+    description:
+      'Detects touches on a wall with a single webcam, using hand tracking and depth estimation, and drives a balloon math game.',
+    longDescription:
+      'Built a Unity system that detects a touch on a wall from one webcam. A homography maps four calibrated corners to wall coordinates, BlazeHand models running in Unity Inference Engine track the fingertip, and Depth Anything V2 Small estimates depth to tell a real touch from a hand hovering nearby. The tap events drive a balloon math game. Touch detection is reliable enough for a demo, and a side-angle camera improves it further.',
+    tags: ['Unity', 'C#', 'Inference Engine', 'Depth Estimation', 'Computer Vision'],
+    repos: [{ label: 'Code', url: 'https://github.com/Mhmd-Shkeir/Wall-Touch' }],
+  },
+]
+
+/** Shown first; everything else sits behind "More projects". */
+export const featuredProjectIds = [
+  'master-erp',
+  'sneaker-recognition',
+  'smart-university',
+  'lumina-chat',
+  'wall-touch',
 ]
 
 export const skillCategories: SkillCategory[] = [

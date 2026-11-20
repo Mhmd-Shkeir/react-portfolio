@@ -30,7 +30,7 @@ export default function GithubActivity() {
           <img
             src={`https://ghchart.rshah.org/3b82f6/${GITHUB_USERNAME}`}
             alt={`${GITHUB_USERNAME}'s GitHub contribution graph`}
-            className="mx-auto min-w-[640px]"
+            className="mx-auto h-auto w-full max-w-[663px]"
             loading="lazy"
             onError={() => setChartFailed(true)}
           />

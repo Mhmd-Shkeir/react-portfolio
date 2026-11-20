@@ -20,7 +20,6 @@ export interface Project {
   tags: string[]
   repos?: ProjectRepo[]
   demo?: string
-  featured?: boolean
 }
 
 export interface Skill {

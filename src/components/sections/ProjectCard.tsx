@@ -5,9 +5,14 @@ import type { Project } from '@/types'
 interface ProjectCardProps {
   project: Project
   onClick: () => void
+  className?: string
 }
 
-export default function ProjectCard({ project, onClick }: ProjectCardProps) {
+export default function ProjectCard({
+  project,
+  onClick,
+  className = '',
+}: ProjectCardProps) {
   return (
     <motion.button
       onClick={onClick}
@@ -16,7 +21,7 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
       viewport={{ once: true, margin: '-60px' }}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.4 }}
-      className="group flex h-full flex-col rounded-2xl border border-border bg-surface p-6 text-left transition-colors duration-200 hover:bg-surface-hover hover:border-accent/40"
+      className={`group flex h-full flex-col rounded-2xl border border-border bg-surface p-6 text-left transition-colors duration-200 hover:bg-surface-hover hover:border-accent/40 ${className}`}
     >
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-lg font-semibold text-ink">{project.title}</h3>
